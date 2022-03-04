@@ -7,6 +7,7 @@
   --bg: #fff;
   --theme-main: #e02c6d;
   --theme-blue: #2d25a0;
+  --border-tomato: tomato;
 }
 
 * {
@@ -59,7 +60,7 @@ section {
 .section-title h2 {
   display: inline-block;
   font-size: 40px;
-  border-bottom: 3px solid var(--theme-main);
+  border-bottom: 3px solid var(--border-tomato);
 }
 .menu__item a {
   font-size: 16;
@@ -141,10 +142,6 @@ section {
 .header__bg {
   width: 550px;
   max-width: 50%;
-  /* background-image: url(../images/bg-ball.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 .header__bg img {
   transition: transform 0.7s ease;
@@ -170,6 +167,16 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   box-shadow: 0 0 40px 12px #00000021;
+}
+.player__img {
+  overflow: hidden;
+}
+.players__card:hover .player__img img {
+  transform: scale(1.2);
+}
+.player__img img {
+  transition: 0.3s;
+  width: 100%;
 }
 .player__name {
   font-size: 28px;
@@ -209,6 +216,14 @@ section {
 .highlight__bg {
   width: 550px;
   max-width: 50%;
+  overflow: hidden;
+}
+.highlight__bg img {
+  transition: 0.3s;
+  width: 100%;
+}
+.highlight__bg img:hover {
+  transform: scale(1.2);
 }
 
 /* ---------------------------*\
@@ -229,7 +244,7 @@ section {
 .live__match h3 {
   font-size: 30px;
   display: inline-block;
-  border-bottom: 2px solid var(--theme-main);
+  border-bottom: 2px solid var(--border-tomato);
 }
 .live__wrapper iframe {
   width: 95%;
@@ -252,11 +267,15 @@ section {
 }
 .gallery__item {
   box-shadow: 1px 1px 8px #00000055;
+  overflow: hidden;
 }
 .gallery__item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  transition: 0.3s;
+}
+.gallery__item img:hover {
+  transform: scale(1.2);
 }
 .wide {
   grid-column: span 2;
